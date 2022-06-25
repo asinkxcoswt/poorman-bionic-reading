@@ -2,7 +2,7 @@
 
 Chrome extension to bionify selected text.
 
-This is like https://bionic-reading.com/, but their Chrome extension is not presant to use, so I create this extension. But the algorithm is not as complex as the original one. This extension simply bionifies 60% of word length.
+This is like https://bionic-reading.com/, but their Chrome extension is not pleasant to use, so I create this extension. But the algorithm is not as complex as the original one. This extension simply bionifies 60% of word length.
 
 # How to use
 
