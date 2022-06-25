@@ -1,14 +1,18 @@
-const sel = window.getSelection(); // Gets selection
-if (sel.rangeCount) {
-  // Creates a new element, and insert the selected text with the chosen font inside
-  const e = document.createElement("span");
-  //   e.style = "color: red";
-  e.innerHTML = bionifyText(sel.toString());
+run();
 
-  // https://developer.mozilla.org/en-US/docs/Web/API/Selection/getRangeAt
-  const range = sel.getRangeAt(0);
-  range.deleteContents(); // Deletes selected text…
-  range.insertNode(e); // … and inserts the new element at its place
+function run() {
+  const sel = window.getSelection(); // Gets selection
+  if (sel.rangeCount) {
+    // Creates a new element, and insert the selected text with the chosen font inside
+    const e = document.createElement("span");
+    //   e.style = "color: red";
+    e.innerHTML = bionifyText(sel.toString());
+
+    // https://developer.mozilla.org/en-US/docs/Web/API/Selection/getRangeAt
+    const range = sel.getRangeAt(0);
+    range.deleteContents(); // Deletes selected text…
+    range.insertNode(e); // … and inserts the new element at its place
+  }
 }
 
 function bionifyText(text) {
