@@ -1,0 +1,19 @@
+{
+  "name": "Poorman Bionic Reading",
+  "description": "Bionic Reading poorman version",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["contextMenus", "scripting"],
+  "background": {
+    "service_worker": "main.js"
+  },
+
+  "host_permissions": ["*://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "match_origin_as_fallback": true,
+      "js": ["bionify.js"]
+    }
+  ]
+}
